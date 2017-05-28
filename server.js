@@ -2,6 +2,8 @@ const express = require('express');
 
 var app = express(); // calls express method and assigns it to the app variable
 
+app.use(express.static(__dirname + '/public')); // takes absolute path
+
 app.get('/', (req, res) => {
   // res.send('<h1>Hello Express!</h1>'); // sends response to HTTP request
   res.send({
